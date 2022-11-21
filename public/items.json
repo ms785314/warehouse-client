@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Sapiens",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "Non fic"
+    },
+    {
+        "name": "Homo deus",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "catagory": "Non fic",
+        "supplier": "Rafid Raihan"
+    },
+    {
+        "name": "সংস্কৃতি কথা",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "Non fic"
+    },
+    {
+        "name": " ভালোবাসা ",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "fiction"
+    },
+    {
+        "name": "বিবর্তনের পথ ধরে",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "Non fic"
+    },
+    {
+        "name": "সত্যের সন্ধানে",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "Non fic"
+    },
+    {
+        "name": " time",
+        "discription": "lorem 100",
+        "price": 300,
+        "image": "https://cdn.vectorstock.com/i/1000x1000/35/52/placeholder-rgb-color-icon-vector-32173552.webp",
+        "quantity": 33,
+        "added-at": "12 jan 2022",
+        "supplier": "Rafid Raihan",
+        "catagory": "Pop science"
+    }
+]
