@@ -15,7 +15,7 @@ const StockAlert = () => {
                     <p className='text-center w-full'>Quantity</p>
                 </div>
                 {
-                    items.filter(item => item.quantity <= 10).map((item,index) => {
+                    items.filter(item => item.quantity < 10).map((item,index) => {
                         return (
                             <div className=' justify-evenly flex border' key={index}>
                                 <p className='text-center py-3 w-full'>{index + 1}</p>
