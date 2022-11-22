@@ -12,7 +12,7 @@ const TableRow = ({item}) => {
     //     "supplier": "Rafid Raihan",
     //     "catagory": "Non fic"
     // }
-    const { name, discription, price, image, quantity, supplier, catagory } = item;
+    const { name, discription, price, image, quantity, supplier, catagory ,_id} = item;
     return (
         <tr className=''>
             <td className="px-6 py-4 font-bold  text-gray-800 whitespace-nowrap flex justify-center">
@@ -22,7 +22,7 @@ const TableRow = ({item}) => {
                 {name}
             </td>
             <td className="px-6 py-4 font-bold text-gray-800 whitespace-nowrap">
-                {discription}
+                {discription.length > 30? discription.slice(0,30) + '..' : discription}
             </td>
             <td className="px-6 py-4 font-bold text-center whitespace-nowrap">
                 {price}
@@ -38,7 +38,7 @@ const TableRow = ({item}) => {
             </td>
             <td className="px-6 py-4 font-bold text-center whitespace-nowrap ">
 
-                <Link><button className='p-3 bg-black/[.15] text-black rounded'>Update</button></Link>
+                <Link to={`/inventory/${_id}`}><button className='p-3 bg-black/[.15] text-black rounded'>Update</button></Link>
             </td>
         </tr>
 

@@ -2,7 +2,7 @@
     {
         "id":"1",
         "name": "Sapiens",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://www.ynharari.com/wp-content/uploads/2017/01/Sapiens-French.jpg",
         "quantity": 33,
@@ -14,7 +14,7 @@
     {
         "id":"2",
         "name": "Homo deus",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://www.ynharari.com/wp-content/uploads/2017/01/Thai-homo-deus-cover-.png",
         "quantity": 33,
@@ -26,7 +26,7 @@
     {
         "id":"3",
         "name": "Dopamin Detox",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwlToVY-Kv-yadCEwl0XRvLAUoI8cQElegzg&usqp=CAU",
         "quantity": 33,
@@ -38,7 +38,7 @@
     {
         "id":"4",
         "name": "Universe",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://astronomynow.com/wp-content/uploads/2020/04/Your-Place-in-the-Universe-Book.jpg",
         "quantity": 3,
@@ -50,7 +50,7 @@
     {
         "id":"5",
         "name": "বিবর্তনের পথ ধরে",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://www.chandradeep.com/store/image/cache/catalog/product/Biology/Bibortoner%20Poth%20Dhore/bibortoner-poth-dhore-a-700x700.jpg",
         "quantity": 6,
@@ -62,7 +62,7 @@
     {
         "id":"6",
         "name": "সত্যের সন্ধানে",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://bdebooks.com/wp-content/uploads/2019/10/front-4.4.1.jpg",
         "quantity": 7,
@@ -74,7 +74,7 @@
     {
         "id":"7",
         "name": " Time",
-        "discription": "lorem 100",
+        "discription": "This is a book written by the best seeller writer John Doe",
         "price": 300,
         "image": "https://www.barnesandnoble.com/blog/wp-content/uploads/2013/09/greta_wells.jpg",
         "quantity": 33,
