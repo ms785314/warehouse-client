@@ -4,7 +4,7 @@ import Table from '../Table/Table';
 const Items = () => {
     return (
         <div>
-            <div className=' p-4 '>
+            <div className='p-4'>
                 <Table></Table>
             </div>
         </div>

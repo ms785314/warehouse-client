@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { ItemsContext } from "../Home/Home";
 import TableRow from "../TableRow/TableRow";
 
 export default function Table() {
-    const [items,setitems] = useState([]);
-    useEffect(()=>{
-        fetch('items.json')
-        .then(res=>res.json())
-        .then(items => setitems(items));
-    },[]);
+    // const [items,setitems] = useState([]);
+    // useEffect(()=>{
+    //     fetch('items.json')
+    //     .then(res=>res.json())
+    //     .then(items => setitems(items));
+    // },[]);
+    const items = useContext(ItemsContext);
     
     return (
         <div className="flex flex-col shadow-lg">
