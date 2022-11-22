@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Inventory', href: '/inventory', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Add Items', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'login', href: '/login', current: false },
+  { name: 'Register', href: '/register', current: false },
+  { name: 'Add Items', href: '#', current: false }
+  
 ]
 
 function classNames(...classes) {
