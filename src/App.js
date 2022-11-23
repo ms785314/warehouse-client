@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Navbar from './Components/Navbar/Navbar';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Resgister from './Components/Resigter/Resgister';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
@@ -46,6 +47,7 @@ function App() {
         </PrivateRoute>}></Route>
         <Route path='/register' element={<Resgister></Resgister>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       
     </div>
