@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
-import { ItemsContext } from "../Home/Home";
-import TableRow from "../TableRow/TableRow";
+import ManageItemsRow from "./ManageItemsRow";
 
-export default function Table() {
+export default function ManageItemTable({items = []}) {
     // const [items,setitems] = useState([]);
     // useEffect(()=>{
     //     fetch('items.json')
     //     .then(res=>res.json())
     //     .then(items => setitems(items));
     // },[]);
-    const items = useContext(ItemsContext);
+    // const items = useContext(ItemsContext);
+    // const items = [];
 
     return (
         <div className="flex flex-col shadow-lg">
@@ -35,44 +34,20 @@ export default function Table() {
                                         scope="col"
                                         className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
                                     >
-                                        Discription
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
-                                    >
-                                        Price
-                                    </th>
-
-                                    <th
-                                        scope="col"
-                                        className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
-                                    >
-                                        Quantity
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
-                                    >
                                         SUPPLIER
                                     </th>
+                                    
                                     <th
                                         scope="col"
                                         className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
                                     >
-                                        Catagory
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-6 py-3 font-bold text-center text-gray-500 uppercase "
-                                    >
-                                        Manage
+                                        Remove
                                     </th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y [&>*:nth-child(odd)]:bg-gray-500/[.15] [&>*:nth-child(even)]:bg-blue-500divide-gray-200">
                                 {
-                                    items.map((item, index) => <TableRow item={item} key={index}></TableRow>)
+                                    items.map((item, index) => <ManageItemsRow item={item} key={index}></ManageItemsRow>)
                                 }
 
                             </tbody>

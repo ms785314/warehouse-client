@@ -8,6 +8,7 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import ManageItems from './Components/ManageItems/ManageItems';
 import Navbar from './Components/Navbar/Navbar';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -20,10 +21,6 @@ import { firebaseApp } from './firebase';
 function App() {
   const auth = getAuth(firebaseApp);
   const [user] = useAuthState(auth);
-  
-
-
- 
   return (
     <div className="App min-h-[100vh]">
       <ToastContainer limit={1}></ToastContainer>
@@ -36,9 +33,15 @@ function App() {
         </PrivateRoute>}></Route>
         <Route path='/register' element={<Resgister></Resgister>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/manageitems' element={
+          <PrivateRoute>
+            <ManageItems></ManageItems>
+          </PrivateRoute>
+        }></Route>
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
+
       </Routes>
-      
+
     </div>
   );
 }
