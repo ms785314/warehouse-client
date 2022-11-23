@@ -1,25 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link,  useLocation, useNavigate } from 'react-router-dom';
 import { firebaseApp } from '../../firebase';
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 export default function Login() {
     const auth = getAuth(firebaseApp);
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle , loading, error]  = useSignInWithGoogle(auth);
     const handleSignUpWithGoogle = () => {
         console.log('ok');
         signInWithGoogle();
     }
-    const notify = () => toast(`Hello,${user.user.displayName}`);
+
+    const [user] = useAuthState(auth);
+    const notify = () => toast(`Hello,${user.user?.displayName}`);
+    // console.log('loading',loading);
+    
+    const navigate =useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     if (user) {
         notify();
-        console.log(user);
-        console.log('got it');
+       navigate(from,{replace:true})
     }
-    console.log('user',user);
+   
+    
 
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
