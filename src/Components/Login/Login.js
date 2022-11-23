@@ -1,34 +1,41 @@
 import React from 'react';
-import { Link,  useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { firebaseApp } from '../../firebase';
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { useAuthState, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Login() {
     const auth = getAuth(firebaseApp);
-    const [signInWithGoogle , loading, error]  = useSignInWithGoogle(auth);
+    const [signInWithGoogle, loading] = useSignInWithGoogle(auth);
     const handleSignUpWithGoogle = () => {
-        console.log('ok');
+
         signInWithGoogle();
     }
 
+
     const [user] = useAuthState(auth);
-    const notify = () => toast(`Hello,${user.user?.displayName}`);
+    // const notify = () => toast(`Hello,${user.user?.displayName}`);
     // console.log('loading',loading);
-    
-    const navigate =useNavigate();
+
+    const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
     if (user) {
-        notify();
-       navigate(from,{replace:true})
+        navigate(from, { replace: true })
     }
-   
     
+    const [signInWithEmailAndPassword,] =useSignInWithEmailAndPassword(auth);
 
+    const handleLogIn = (e) => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+        signInWithEmailAndPassword(email,password);
+    }
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
             <ToastContainer></ToastContainer>
@@ -36,7 +43,7 @@ export default function Login() {
                 <h1 className="text-3xl font-semibold text-center text-purple-700 uppercase">
                     Log In
                 </h1>
-                <form className="mt-6">
+                <form className="mt-6" onSubmit={handleLogIn}>
                     <div className="mb-2">
                         <label
                             htmlFor="email"
@@ -47,6 +54,8 @@ export default function Login() {
                         <input
                             type="email"
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            name='email'
+                            required
                         />
                     </div>
                     <div className="mb-2">
@@ -59,6 +68,8 @@ export default function Login() {
                         <input
                             type="password"
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                            name='password'
+                            required
                         />
                     </div>
                     <Link
@@ -99,7 +110,7 @@ export default function Login() {
                         to={'/register'}
                         className="font-medium text-purple-600 hover:underline"
                     >
-                       Register
+                        Register
                     </Link>
                 </p>
             </div>

@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, redirect, Route, Routes, useNavigate } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import './App.css';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
@@ -20,24 +20,13 @@ import { firebaseApp } from './firebase';
 function App() {
   const auth = getAuth(firebaseApp);
   const [user] = useAuthState(auth);
-  // const [takeUser, setUser] = useState({});
-  // useEffect(()=>{
-  //   setUser(user)
-  // },[user])
   
-  // if (user) {
-  //   return redirect("/login");
-  // }
-  
-  // const PrivateRoute = ({children }) => {
-  //   return user?.displayName ? children : <Navigate to="/login" replace={true} />;
-  // };
 
 
-  
+ 
   return (
     <div className="App min-h-[100vh]">
-      <ToastContainer></ToastContainer>
+      <ToastContainer limit={1}></ToastContainer>
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
