@@ -22,10 +22,10 @@ const TableRow = ({item}) => {
                 {name}
             </td>
             <td className="px-6 py-4 font-bold text-gray-800 whitespace-nowrap">
-                {discription.length > 30? discription.slice(0,30) + '..' : discription}
+                {discription?.length > 30? discription.slice(0,30) + '..' : discription}
             </td>
             <td className="px-6 py-4 font-bold text-center whitespace-nowrap">
-                {price}
+                {price} $
             </td>
             <td className="px-6 py-4 font-bold">
                 {quantity}

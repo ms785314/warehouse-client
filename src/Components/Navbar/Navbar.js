@@ -24,10 +24,11 @@ export default function Navbar() {
   // console.log('fron nav',user);
 
   const navigation = [
-    { name: 'Inventory', href: '/inventory', current: true },
+    { name: 'Inventory', href: '/inventory', current: false },
     { name: 'login', href: '/login', current: false,ishidden: user},
     { name: 'Register', href: '/register', current: false },
-    { name: 'Add Items', href: '#', current: false }
+    { name: 'Add Items', href: '/addinventory', current: false,ishidden:!user },
+    { name: 'My Items', href: '/myitems', current: false,ishidden:!user }
   ]
 
   async function handleSignOut() {
