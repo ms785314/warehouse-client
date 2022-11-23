@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import { useState } from "react";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import { firebaseApp } from "../../firebase";
@@ -21,7 +21,7 @@ const AddInventory = () => {
         const supplier = e.target.supplier.value;
         const discription = e.target.discription.value;
         let item = { name, discription, price, image: imageUrl, quantity, sold: 0, supplier, catagory, addedBy: user?.email }
-        // console.log(item);
+      
 
         postData(`http://localhost:5000/addItem`, item)
             .then(res => { 

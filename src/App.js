@@ -1,13 +1,12 @@
 
-import { getAuth } from 'firebase/auth';
-import { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Navigate, redirect, Route, Routes, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
-import { firebaseApp } from './firebase';
+
+
+import {  Route, Routes } from 'react-router-dom';
+import {  ToastContainer } from 'react-toastify';
+
 import './App.css';
 import AddInventory from './Components/AddInventory/AddInventory';
-import Footer from './Components/Footer/Footer';
+
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import ManageItems from './Components/ManageItems/ManageItems';
@@ -22,8 +21,6 @@ import UpdateItem from './Components/UpdateItem/UpdateItem';
 
 
 function App() {
-  const auth = getAuth(firebaseApp);
-  const [user] = useAuthState(auth);
   return (
     <div className="App min-h-[100vh]">
       <ToastContainer limit={1}></ToastContainer>

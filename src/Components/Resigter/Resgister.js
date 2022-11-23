@@ -9,7 +9,7 @@ export default function Resigter() {
     const auth = getAuth(firebaseApp);
     const [
         createUserWithEmailAndPassword,
-        user,
+        ,
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
@@ -17,13 +17,13 @@ export default function Resigter() {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email,password);
+        // console.log(email,password);
         createUserWithEmailAndPassword(email,password);
     }
     if (error) {
-        console.log('error',error);
+        // console.log('error',error);
     }
-    console.log('user in',user);
+    // console.log('user in',user);
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
             <div className="p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">

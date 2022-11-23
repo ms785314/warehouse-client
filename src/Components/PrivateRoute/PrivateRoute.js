@@ -6,7 +6,7 @@ import { firebaseApp } from '../../firebase';
 
 const PrivateRoute = ({ children }) => {
     const auth = getAuth(firebaseApp);
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const location = useLocation();
 
     if (!loading) {
