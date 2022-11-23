@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, redirect, Route, Routes, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import { firebaseApp } from './firebase';
 import './App.css';
 import AddInventory from './Components/AddInventory/AddInventory';
 import Footer from './Components/Footer/Footer';
@@ -16,7 +17,7 @@ import PageNotFound from './Components/PageNotFound/PageNotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Resgister from './Components/Resigter/Resgister';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
-import { firebaseApp } from './firebase';
+
 
 
 
