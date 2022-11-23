@@ -15,7 +15,7 @@ const ManageItemsRow = ({item}) => {
     const { name, image, supplier,_id} = item;
     const hanldeRemoveItem = (id) => {
         console.log('removing',id);
-        postData(`http://localhost:5000/removeItem/${item._id}`,{id})
+        postData(`https://warehouse-server-9y3w.onrender.com/removeItem/${item._id}`,{id})
     }
     async function postData(url = '', data={}) {
         const response = await fetch(url, {

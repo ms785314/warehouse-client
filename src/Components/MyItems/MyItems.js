@@ -10,7 +10,7 @@ const MyItems = () => {
     const [myItems,setMyItems] = useState([]);
 
     useEffect(()=>{
-        postData(`http://localhost:5000/myitems`,{email:user?.email}).then(res => setMyItems(res));
+        postData(`https://warehouse-server-9y3w.onrender.com/myitems`,{email:user?.email}).then(res => setMyItems(res));
     },[user])
 
 

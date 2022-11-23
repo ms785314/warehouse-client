@@ -4,7 +4,7 @@ const useOneItem = (id) => {
     
     const [item, setitem] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/items/${id}`)
+        fetch(`https://warehouse-server-9y3w.onrender.com/items/${id}`)
             .then(res => res.json())
             .then(item => setitem(item));
     }, [id]);

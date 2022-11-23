@@ -23,7 +23,7 @@ const AddInventory = () => {
         let item = { name, discription, price, image: imageUrl, quantity, sold: 0, supplier, catagory, addedBy: user?.email }
       
 
-        postData(`http://localhost:5000/addItem`, item)
+        postData(`https://warehouse-server-9y3w.onrender.com/addItem`, item)
             .then(res => { 
                 if (res.acknowledged) {
                     toast('Added New Item');
