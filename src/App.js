@@ -1,12 +1,7 @@
-
-
-
 import {  Route, Routes } from 'react-router-dom';
 import {  ToastContainer } from 'react-toastify';
-
 import './App.css';
 import AddInventory from './Components/AddInventory/AddInventory';
-
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import ManageItems from './Components/ManageItems/ManageItems';
@@ -16,7 +11,6 @@ import PageNotFound from './Components/PageNotFound/PageNotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Resgister from './Components/Resigter/Resgister';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
-
 
 
 
