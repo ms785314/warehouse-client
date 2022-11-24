@@ -24,7 +24,7 @@ const UpdateItem = () => {
             let updatedItem = { ...item, quantity: qty - 1 }
             // console.log(updatedItem);
             
-            postData(`https://warehouse-server-9y3w.onrender.com/update/${item._id}`,updatedItem)
+            postData(`https://wh-server-latest.onrender.com/update/${item._id}`,updatedItem)
         }
     }
     function handleRestock(e) {
@@ -35,7 +35,7 @@ const UpdateItem = () => {
             setQty(qty + value);
             let updatedItem = { ...item, quantity: qty + value }
             // console.log('udta',updatedItem);
-            postData(`https://warehouse-server-9y3w.onrender.com/update/${item._id}`,updatedItem)
+            postData(`https://wh-server-latest.onrender.com/update/${item._id}`,updatedItem)
             e.target.stockNumber.value = '';
         }
     }
